@@ -6,11 +6,9 @@ using UnityEngine.UI;
 
 public class Ads : MonoBehaviour {
 
-	#if UNITY_ANDROID
-	private string gameID = "1661301";
-	#elif UNITY_IOS
-	private string gameID = "1661300";
-	#endif
+
+	private string gameID = "1661301";  // nur zum test
+
 
 	Button m_Button;
 
@@ -20,6 +18,12 @@ public class Ads : MonoBehaviour {
 
 
 	void Start () {
+		#if UNITY_ANDROID
+		gameID = "1661301";
+		#elif UNITY_IOS
+		gameID = "1661300";
+		#endif
+
 
 		m_Button = GetComponent<Button> ();
 		if (m_Button)
